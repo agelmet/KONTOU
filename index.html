@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Έλενα Κοντού | Σύμβουλος Ψυχικής Υγείας & Ψυχοθεραπεύτρια - Παλαιό Φάληρο</title>
+    <meta name="description" content="Η Έλενα Κοντού είναι Σύμβουλος Ψυχικής Υγείας στο Π. Φάληρο. Παρέχει Συνθετική Ψυχοθεραπεία για ενήλικες, εφήβους, ζευγάρια, δια ζώσης & online.">
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/logo%20of1).jpg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Elegant Font Pairing: Playfair Display for headings, Manrope for clean modern body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lux: {
+                            taupe: '#9b8579',       /* Muted luxurious rose/taupe */
+                            taupeLight: '#bdaea6',  /* Lighter taupe for accents */
+                            dark: '#0c0e12',        /* Deep charcoal/black */
+                            slate: '#1a1d24',       /* Dark slate gray */
+                            gray: '#f5f5f7',        /* Soft off-white */
+                            text: '#2d333b',        /* Soft black for readability */
+                            border: '#e1e3e6'       /* Delicate borders */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'elegant': '0 20px 40px -15px rgba(12, 14, 18, 0.08)',
+                        'glow': '0 0 30px -5px rgba(155, 133, 121, 0.4)',
+                        'card': '0 10px 30px -10px rgba(0,0,0,0.05)',
+                    },
+                    animation: {
+                        'float': 'float 7s ease-in-out infinite',
+                        'float-delayed': 'float 7s ease-in-out 3.5s infinite',
+                        'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth, Luxurious Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f7; }
+        ::-webkit-scrollbar-thumb { background: #9b8579; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7a685e; }
+
+        /* Typography Refinements */
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        
+        /* Reveal Animations (Scroll) */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .glass-dark {
+            background: rgba(12, 14, 18, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Image Lightbox */
+        #lightbox {
+            opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        }
+        #lightbox.active { opacity: 1; pointer-events: auto; }
+        #lightbox img { transform: scale(0.95); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        #lightbox.active img { transform: scale(1); }
+
+        /* Logo Special Styling */
+        .logo-circle {
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Ensures contents stay in circle */
+        }
+        .logo-circle:hover {
+            box-shadow: 0 0 25px rgba(155, 133, 121, 0.5);
+            transform: scale(1.05);
+        }
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Prevents cropping */
+            padding: 4px; /* Slight breathing room inside the circle */
+        }
+
+        /* Accordion Custom */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: #9b8579;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-lux-gray text-lux-text font-sans selection:bg-lux-taupe selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="glass rounded-full flex justify-between items-center px-6 py-3 shadow-elegant">
+                
+                <!-- Logo -->
+                <a href="#" class="group relative z-10" aria-label="Επιστροφή στην αρχή">
+                    <div class="logo-circle w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/logo%20of1).jpg" alt="Έλενα Κοντού Logo">
+                    </div>
+                </a>
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-semibold tracking-wide text-lux-dark hover:text-lux-taupe transition-colors uppercase">Η Ελενα Κοντου</a>
+                    <a href="#services" class="text-sm font-semibold tracking-wide text-lux-dark hover:text-lux-taupe transition-colors uppercase">Υπηρεσιες</a>
+                    <a href="#approach" class="text-sm font-semibold tracking-wide text-lux-dark hover:text-lux-taupe transition-colors uppercase">Προσεγγιση</a>
+                    <a href="#space" class="text-sm font-semibold tracking-wide text-lux-dark hover:text-lux-taupe transition-colors uppercase">Ο Χωρος</a>
+                    <a href="#contact" class="px-8 py-3 bg-lux-dark text-white rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-lux-taupe transition-all transform hover:-translate-y-1 shadow-lg">Κλειστε Ραντεβου</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-lux-dark focus:outline-none z-10" id="mobile-menu-btn" aria-label="Μενού">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-0 left-0 w-full h-screen bg-white/98 backdrop-blur-3xl hidden flex-col items-center justify-center space-y-8 z-0">
+            <a href="#about" class="text-2xl font-serif text-lux-dark mobile-link">Η Έλενα Κοντού</a>
+            <a href="#services" class="text-2xl font-serif text-lux-dark mobile-link">Υπηρεσίες</a>
+            <a href="#approach" class="text-2xl font-serif text-lux-dark mobile-link">Προσέγγιση</a>
+            <a href="#space" class="text-2xl font-serif text-lux-dark mobile-link">Ο Χώρος</a>
+            <a href="#contact" class="px-10 py-4 bg-lux-taupe text-white rounded-full text-lg font-semibold mobile-link shadow-glow mt-4">Κλείστε Ραντεβού</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[100svh] flex items-center pt-32 pb-20 px-6 overflow-hidden bg-lux-dark">
+        <!-- Background Image Space -->
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5172.JPG');"></div>
+        </div>
+        
+        <!-- Gradient Overlays for readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-lux-dark/95 via-lux-dark/80 to-lux-dark/30 z-10"></div>
+        <div class="absolute inset-0 bg-black/20 z-10"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-20">
+            
+            <!-- Hero Text (Left) -->
+            <div class="lg:col-span-7 reveal text-center lg:text-left pt-10 lg:pt-0">
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-dark text-lux-taupeLight text-xs font-bold tracking-widest uppercase mb-8 border border-lux-taupe/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-lux-taupe animate-pulse"></span>
+                    Συμβουλος Ψυχικης Υγειας & Ψυχοθεραπευτρια
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-white leading-[1.15] mb-6 drop-shadow-xl">
+                    Συνθετική Ψυχοθεραπεία &amp; Παιδαγωγική: <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-lux-taupeLight to-lux-taupe italic">Ένα Ασφαλές Πλαίσιο</span> για Κάθε Στάδιο της Ζωής.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Ένας 100% ασφαλής και μη-επικριτικός χώρος στο Παλαιό Φάληρο. Στόχος μας είναι να σας βοηθήσουμε να βρείτε ξανά το κέντρο και τη φωνή σας.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-lux-taupe text-white rounded-full font-semibold hover:bg-white hover:text-lux-dark transition-all duration-300 shadow-glow flex items-center justify-center gap-2 group">
+                        ΕΠΙΚΟΙΝΩΝΙΑ
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-semibold hover:border-lux-taupe hover:bg-white/5 transition-all duration-300 backdrop-blur-sm text-center">
+                        ΠΕΡΙΣΣΟΤΕΡΑ
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image (Right) -->
+            <div class="lg:col-span-5 relative reveal delay-200 mt-12 lg:mt-0 px-4 md:px-12 lg:px-0">
+                <div class="relative w-full max-w-[420px] mx-auto aspect-[3/4] rounded-t-[10rem] rounded-b-[2rem] overflow-hidden shadow-2xl glass-dark p-2 transform transition-transform duration-700 hover:scale-[1.02]">
+                    <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/image0.jpeg" alt="Έλενα Κοντού" class="w-full h-full object-cover rounded-t-[9.5rem] rounded-b-[1.5rem] opacity-90 transition-opacity hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-lux-dark/60 to-transparent z-10 rounded-t-[9.5rem] rounded-b-[1.5rem]"></div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -z-10 top-1/2 right-0 w-64 h-64 bg-lux-taupe/20 rounded-full blur-[80px] -translate-y-1/2"></div>
+            </div>
+        </div>
+
+        <!-- Elegant wave/fade separator -->
+        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-lux-gray to-transparent z-20 pointer-events-none"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-5 relative reveal">
+                <!-- Parallax / Floating Image -->
+                <div class="relative w-full max-w-md mx-auto animate-float">
+                    <div class="absolute inset-0 bg-lux-taupe rounded-3xl transform rotate-3 scale-105 opacity-20"></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/image1.jpeg" alt="Έλενα Κοντού - Πορτρέτο" class="relative z-10 w-full h-auto rounded-3xl shadow-elegant object-cover">
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 reveal delay-200">
+                <span class="text-lux-taupe font-bold tracking-widest text-xs uppercase mb-4 block">Γνωριστε τη Θεραπευτρια</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mb-8 leading-tight">Η επιστήμη της Αγωγής συναντά την Ψυχοθεραπεία</h2>
+                
+                <div class="space-y-6 text-lg text-lux-text/80 font-light leading-relaxed">
+                    <p>
+                        Η <strong>Έλενα Κοντού</strong> είναι Σύμβουλος Ψυχικής Υγείας και Ψυχοθεραπεύτρια, διατηρώντας το ιδιωτικό της γραφείο στο Παλαιό Φάληρο. Η ακαδημαϊκή της πορεία συνδυάζει ιδανικά την επιστήμη της Αγωγής με την Ψυχοθεραπεία. 
+                    </p>
+                    <p>
+                        Αρχικά, αποφοίτησε από το Τμήμα Επιστημών της Εκπαίδευσης και Αγωγής στην Προσχολική Ηλικία (ΤΕΕΑΠΗ) του Πανεπιστημίου Πατρών, αποκτώντας μια στέρεη βάση στην παιδική και αναπτυξιακή ψυχολογία. Στη συνέχεια, ολοκλήρωσε το τριετές, απαιτητικό πρόγραμμα Ψυχοθεραπείας &amp; Συμβουλευτικής στο Μητροπολιτικό Κολλέγιο, εξειδικευόμενη στη Συνθετική προσέγγιση (Γνωσιακή-Συμπεριφορική, Ψυχοδυναμική, Προσωποκεντρική).
+                    </p>
+                    
+                    <blockquote class="border-l-2 border-lux-taupe pl-6 py-2 my-8 text-xl font-serif text-lux-dark italic opacity-90">
+                        "Η επαγγελματική ταυτότητα είναι βαθιά ριζωμένη στην ενσυναίσθηση και την κοινωνική προσφορά."
+                    </blockquote>
+                    
+                    <p>
+                        Με συνολική κλινική εμπειρία 5 ετών, η πολύτιμη εθελοντική της εργασία—τόσο στην υποστήριξη προσφύγων (γονέων και παιδιών) στην Πάτρα, όσο και στην Τηλεφωνική Γραμμή υποστήριξης <em>"Be Strong 1069"</em> για άτομα που έρχονται αντιμέτωπα με τον καρκίνο—της έχει χαρίσει μια σπάνια ικανότητα: να διαχειρίζεται το βαρύ ψυχικό φορτίο, το στρες και την κρίση με απόλυτη ψυχραιμία, σταθερότητα και ανθρωπιά.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-lux-taupe font-bold tracking-widest text-xs uppercase">Τομεις Εξειδικευσης</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mt-4 mb-6">Υπηρεσίες</h2>
+                <div class="w-16 h-0.5 bg-lux-taupe mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Service 1 -->
+                <div class="group p-10 rounded-3xl bg-lux-gray hover:bg-lux-dark transition-all duration-500 reveal border border-transparent hover:border-lux-slate">
+                    <div class="w-16 h-16 rounded-2xl bg-white shadow-card flex items-center justify-center mb-8 group-hover:bg-lux-taupe transition-colors duration-500">
+                        <i data-lucide="user" class="w-8 h-8 text-lux-dark group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4 group-hover:text-white transition-colors duration-500">Συνθετική Θεραπεία Ενηλίκων &amp; Ψυχοσωματικά Συμπτώματα</h3>
+                    <p class="text-lux-text/70 leading-relaxed group-hover:text-gray-300 transition-colors duration-500 font-light">
+                        Το έντονο άγχος και τα καταπιεσμένα συναισθήματα πολύ συχνά σωματοποιούνται, προκαλώντας πόνους χωρίς ιατρική αιτία. Μέσω της Συνθετικής προσέγγισης, δουλεύουμε συνεργατικά για να αποκωδικοποιήσουμε το μήνυμα που προσπαθεί να σας στείλει το σώμα σας, αντιμετωπίζοντας το στρες με ρεαλιστικούς στόχους.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group p-10 rounded-3xl bg-lux-gray hover:bg-lux-dark transition-all duration-500 reveal delay-100 border border-transparent hover:border-lux-slate">
+                    <div class="w-16 h-16 rounded-2xl bg-white shadow-card flex items-center justify-center mb-8 group-hover:bg-lux-taupe transition-colors duration-500">
+                        <i data-lucide="heart-handshake" class="w-8 h-8 text-lux-dark group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4 group-hover:text-white transition-colors duration-500">Ψυχολογία Παιδιών, Εφήβων &amp; Σεξουαλική Διαπαιδαγώγηση</h3>
+                    <p class="text-lux-text/70 leading-relaxed group-hover:text-gray-300 transition-colors duration-500 font-light">
+                        Αντλώντας από το πτυχίο στην Εκπαίδευση, η θεραπεύτρια «μιλάει τη γλώσσα» των νέων. Παρέχεται υποστήριξη στην εφηβεία, με ειδική κατάρτιση στη Σεξουαλική Διαπαιδαγώγηση. Ένα σύγχρονο καταφύγιο για την επίλυση αποριών, την ανακάλυψη ταυτότητας και τη θωράκιση απέναντι σε τοξικές συμπεριφορές.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group p-10 rounded-3xl bg-lux-gray hover:bg-lux-dark transition-all duration-500 reveal border border-transparent hover:border-lux-slate">
+                    <div class="w-16 h-16 rounded-2xl bg-white shadow-card flex items-center justify-center mb-8 group-hover:bg-lux-taupe transition-colors duration-500">
+                        <i data-lucide="users" class="w-8 h-8 text-lux-dark group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4 group-hover:text-white transition-colors duration-500">Συμβουλευτική Σχέσεων, Ζεύγους &amp; Γονέων</h3>
+                    <p class="text-lux-text/70 leading-relaxed group-hover:text-gray-300 transition-colors duration-500 font-light">
+                        Οι διαπροσωπικές σχέσεις συχνά φθείρονται. Σε ένα ουδέτερο περιβάλλον, τα ζευγάρια μαθαίνουν να ακούν ξανά τις ανάγκες του άλλου. Παράλληλα, παρέχεται καθοδήγηση σε γονείς για την οριοθέτηση, τη διαχείριση συγκρούσεων και τη βελτίωση του οικογενειακού κλίματος.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group p-10 rounded-3xl bg-lux-gray hover:bg-lux-dark transition-all duration-500 reveal delay-100 border border-transparent hover:border-lux-slate">
+                    <div class="w-16 h-16 rounded-2xl bg-white shadow-card flex items-center justify-center mb-8 group-hover:bg-lux-taupe transition-colors duration-500">
+                        <i data-lucide="monitor-smartphone" class="w-8 h-8 text-lux-dark group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4 group-hover:text-white transition-colors duration-500">Διαδικτυακή (Online) &amp; Δια Ζώσης Συνεδρίες</h3>
+                    <p class="text-lux-text/70 leading-relaxed group-hover:text-gray-300 transition-colors duration-500 font-light">
+                        Η διαδικασία προσαρμόζεται στη σύγχρονη ζωή. Οι συνεδρίες διεξάγονται στο Παλαιό Φάληρο, αλλά και διαδικτυακά με την ίδια εχεμύθεια. Το ευέλικτο απογευματινό ωράριο (Δευτέρα - Παρασκευή, 14:30 – 21:30) εξυπηρετεί ιδανικά εργαζόμενους και φοιτητές.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section (The Tree) -->
+    <section id="approach" class="py-32 px-6 bg-lux-dark text-white relative overflow-hidden">
+        <!-- Abstract Tree BG Element -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-lux-taupe/30 to-transparent hidden lg:block"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-serif mb-6">Η «Ανατομία» της Συνθετικής Προσέγγισης</h2>
+                <p class="text-xl text-lux-taupeLight font-serif italic">Το Δέντρο της Θεραπείας</p>
+                <p class="mt-6 text-gray-400 font-light leading-relaxed max-w-3xl mx-auto">
+                    Τι σημαίνει «Συνθετική Ψυχοθεραπεία» όταν κλείνει η πόρτα του γραφείου μου; Σημαίνει ότι δεν προσπαθώ να σας χωρέσω με το ζόρι σε μία μόνο αυστηρή θεωρία. Εσείς είστε το κέντρο. Φανταστείτε τη διαδικασία σαν ένα Δέντρο, όπου <strong>συνθέτω</strong> τρία διαφορετικά εργαλεία για να στηρίξω ολόκληρη την ύπαρξή σας:
+                </p>
+            </div>
+
+            <div class="space-y-16 lg:space-y-24">
+                
+                <!-- The Roots -->
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8 reveal">
+                    <div class="lg:w-[45%] lg:text-right">
+                        <h3 class="text-2xl font-serif font-bold text-lux-taupeLight mb-3">Οι Ρίζες</h3>
+                        <p class="text-sm font-bold tracking-widest uppercase text-white/50 mb-4">Η Ψυχοδυναμικη Ματια & Η Παιδαγωγικη</p>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            Πριν λύσουμε το σήμερα, ρίχνουμε φως στο χθες. Πώς τα παιδικά χρόνια και το οικογενειακό περιβάλλον διαμόρφωσαν τους τρόπους που αγαπάτε, φοβάστε και αμύνεστε; Το παιδαγωγικό μου υπόβαθρο βοηθά να «διαβάσω» τις ανάγκες του εσωτερικού σας παιδιού.
+                        </p>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-lux-slate border-2 border-lux-taupe flex items-center justify-center shadow-[0_0_30px_rgba(155,133,121,0.2)] shrink-0 z-10">
+                        <i data-lucide="git-merge" class="w-6 h-6 text-lux-taupeLight"></i>
+                    </div>
+                    <div class="lg:w-[45%] hidden lg:block"></div>
+                </div>
+
+                <!-- The Trunk -->
+                <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 reveal">
+                    <div class="lg:w-[45%] lg:text-left">
+                        <h3 class="text-2xl font-serif font-bold text-lux-taupeLight mb-3">Ο Κορμός</h3>
+                        <p class="text-sm font-bold tracking-widest uppercase text-white/50 mb-4">Η Προσωποκεντρικη Θεραπεια</p>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            Όπως ο κορμός δίνει σταθερότητα, έτσι και η σχέση μας βασίζεται στην απόλυτη, άνευ όρων αποδοχή. Η εμπειρία μου στο εθελοντικό μέτωπο με δίδαξε να στέκομαι δίπλα στον ανθρώπινο πόνο με 100% ενσυναίσθηση. Εδώ, είστε ελεύθεροι να καταρρεύσετε, για να μπορέσετε να ξαναχτιστείτε.
+                        </p>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-lux-slate border-2 border-lux-taupe flex items-center justify-center shadow-[0_0_30px_rgba(155,133,121,0.2)] shrink-0 z-10">
+                        <i data-lucide="shield" class="w-6 h-6 text-lux-taupeLight"></i>
+                    </div>
+                    <div class="lg:w-[45%] hidden lg:block"></div>
+                </div>
+
+                <!-- The Branches -->
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8 reveal">
+                    <div class="lg:w-[45%] lg:text-right">
+                        <h3 class="text-2xl font-serif font-bold text-lux-taupeLight mb-3">Τα Κλαδιά</h3>
+                        <p class="text-sm font-bold tracking-widest uppercase text-white/50 mb-4">Η Γνωσιακη-Συμπεριφορικη (CBT)</p>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            Η ανάπτυξη προς τα πάνω απαιτεί πρακτικά εργαλεία στο «εδώ και τώρα». Αφού κατανοήσουμε τις ρίζες σας, σας δίνω συγκεκριμένες τεχνικές και ασκήσεις για να κόψετε τον φαύλο κύκλο του άγχους και να αρχίσετε να βλέπετε χειροπιαστές αλλαγές.
+                        </p>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-lux-slate border-2 border-lux-taupe flex items-center justify-center shadow-[0_0_30px_rgba(155,133,121,0.2)] shrink-0 z-10">
+                        <i data-lucide="sprout" class="w-6 h-6 text-lux-taupeLight"></i>
+                    </div>
+                    <div class="lg:w-[45%] hidden lg:block"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Space / Office Section -->
+    <section id="space" class="py-24 px-6 bg-lux-gray">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-lux-taupe font-bold tracking-widest text-xs uppercase">Παλαιο Φαληρο</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mt-4">Ο Χώρος Μας</h2>
+                <p class="mt-4 text-lux-text/60 font-light max-w-2xl mx-auto">Ένα περιβάλλον απόλυτης ηρεμίας, σχεδιασμένο για να προσφέρει ασφάλεια και ιδιωτικότητα.</p>
+            </div>
+
+            <!-- Beautiful Masonry / Flex Layout for Uncropped Images -->
+            <div class="columns-1 md:columns-2 gap-6 space-y-6">
+                <!-- Image 1 -->
+                <button class="w-full break-inside-avoid overflow-hidden group relative reveal shadow-card hover:shadow-elegant transition-shadow rounded-xl bg-white p-2" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5177.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
+                    <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5177.JPG" alt="Χώρος γραφείου" class="w-full h-auto object-contain rounded-lg transition-transform duration-700 group-hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-lux-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-lux-dark transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </button>
+                
+                <!-- Image 2 -->
+                <button class="w-full break-inside-avoid overflow-hidden group relative reveal delay-100 shadow-card hover:shadow-elegant transition-shadow rounded-xl bg-white p-2" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5173.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
+                    <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5173.JPG" alt="Λεπτομέρεια χώρου" class="w-full h-auto object-contain rounded-lg transition-transform duration-700 group-hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-lux-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-lux-dark transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </button>
+                
+                <!-- Image 3 -->
+                <button class="w-full break-inside-avoid overflow-hidden group relative reveal shadow-card hover:shadow-elegant transition-shadow rounded-xl bg-white p-2" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5172.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
+                    <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5172.JPG" alt="Γραφείο ψυχοθεραπείας" class="w-full h-auto object-contain rounded-lg transition-transform duration-700 group-hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-lux-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-lux-dark transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </button>
+
+                <!-- Image 4 -->
+                <button class="w-full break-inside-avoid overflow-hidden group relative reveal delay-100 shadow-card hover:shadow-elegant transition-shadow rounded-xl bg-white p-2" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5171.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
+                    <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5171.JPG" alt="Καθιστικό θεραπείας" class="w-full h-auto object-contain rounded-lg transition-transform duration-700 group-hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-lux-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center text-lux-dark transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Element -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-lux-dark/95 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors focus:outline-none">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Προβολή μεγάλης εικόνας" class="max-w-[95vw] max-h-[95vh] object-contain shadow-2xl cursor-default" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 bg-white border-t border-lux-border/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mb-4">Συχνές Ερωτήσεις</h2>
+                <p class="text-lux-text/60 font-light">Λύστε τις βασικές σας απορίες πριν την πρώτη μας συνάντηση.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="faq-item reveal bg-lux-gray rounded-2xl border border-transparent hover:border-lux-border/60 transition-colors">
+                    <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-serif font-semibold text-lg text-lux-dark">Ποιες ηλικιακές ομάδες αναλαμβάνετε;</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-lux-text transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-lux-text/70 font-light leading-relaxed">
+                        Αναλαμβάνω ενήλικες, εφήβους, ζευγάρια και γονείς. Διαθέτοντας ειδική κατάρτιση στην παιδική-αναπτυξιακή ψυχολογία και τη σεξουαλική διαπαιδαγώγηση, παρέχεται στοχευμένη υποστήριξη σε κάθε ξεχωριστή αναπτυξιακή φάση.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal delay-100 bg-lux-gray rounded-2xl border border-transparent hover:border-lux-border/60 transition-colors">
+                    <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-serif font-semibold text-lg text-lux-dark">Τι είναι τα ψυχοσωματικά συμπτώματα και πώς θεραπεύονται;</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-lux-text transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-lux-text/70 font-light leading-relaxed">
+                        Το έντονο άγχος και τα καταπιεσμένα συναισθήματα πολύ συχνά σωματοποιούνται, προκαλώντας πόνους και ενοχλήσεις χωρίς οργανική ιατρική αιτία. Μέσω της Συνθετικής προσέγγισης, αποκωδικοποιούμε αυτό που θέλει να πει το σώμα και εφοδιαζόμαστε με πρακτικά εργαλεία για την αποκατάσταση της ισορροπίας.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal delay-200 bg-lux-gray rounded-2xl border border-transparent hover:border-lux-border/60 transition-colors">
+                    <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-serif font-semibold text-lg text-lux-dark">Παρέχετε διαδικτυακές συνεδρίες (online);</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-lux-text transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-lux-text/70 font-light leading-relaxed">
+                        Ναι, η θεραπευτική διαδικασία προσαρμόζεται στις απαιτήσεις της σύγχρονης ζωής. Εκτός από τις δια ζώσης συνεδρίες στο ιδιωτικό γραφείο στο Π. Φάληρο, παρέχονται εξίσου ποιοτικές συνεδρίες μέσω βιντεοκλήσης, με την ίδια ακριβώς εχεμύθεια και ασφάλεια.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-lux-dark pt-24 pb-12 relative overflow-hidden text-white border-t border-white/5">
+        <!-- Abstract gradient glow -->
+        <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-lux-taupe/5 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-12 gap-12 mb-20">
+                
+                <!-- Intro Column -->
+                <div class="md:col-span-5 reveal">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-glow">
+                        <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/logo%20of1).jpg" alt="Logo" class="w-14 h-14 object-contain rounded-full">
+                    </div>
+                    <h3 class="text-3xl font-serif mb-4">Έλενα Κοντού</h3>
+                    <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-8">
+                        Η επούλωση ξεκινά με την πρώτη επικοινωνία. Είμαστε εδώ για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
+                    </p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors border border-white/10" aria-label="Facebook">
+                            <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/refs/heads/main/icons8-facebook-480.png" alt="Facebook" class="w-5 h-5">
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors border border-white/10" aria-label="Instagram">
+                            <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/refs/heads/main/instagram-logo-instagram-icon-transparent-free-png.png.webp" alt="Instagram" class="w-5 h-5">
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors border border-white/10" aria-label="LinkedIn">
+                            <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/refs/heads/main/icons8-linkedin-480.png" alt="LinkedIn" class="w-5 h-5">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="md:col-span-4 reveal delay-100">
+                    <h4 class="text-xs font-bold tracking-widest text-lux-taupeLight uppercase mb-6">Στοιχεια Επικοινωνιας</h4>
+                    <ul class="space-y-5">
+                        <li class="flex items-center gap-4 group">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-lux-taupe transition-colors">
+                                <i data-lucide="phone" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <a href="tel:6959995945" class="text-gray-300 hover:text-white transition-colors text-lg tracking-wide">695 999 5945</a>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-lux-taupe transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <a href="mailto:elenakontou.psy@gmail.com" class="text-gray-300 hover:text-white transition-colors text-base break-all">elenakontou.psy@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-lux-taupe transition-colors">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span class="text-gray-300 text-base">Παλαιό Φάληρο</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hours -->
+                <div class="md:col-span-3 reveal delay-200">
+                    <h4 class="text-xs font-bold tracking-widest text-lux-taupeLight uppercase mb-6">Ωραριο Λειτουργιας</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span>Δευτέρα - Παρασκευή</span>
+                            <span class="font-medium text-white">14:30 - 21:30</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-2">
+                            <span>Σάββατο</span>
+                            <span class="font-medium text-lux-taupe">Κατόπιν Ραντεβού</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" class="h-8 rounded opacity-80 hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright line -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 reveal">
+                <p class="text-gray-500 text-sm">© 2026 Έλενα Κοντού. Όλα τα δικαιώματα διατηρούνται.</p>
+                <p class="text-gray-500 text-sm">
+                    Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-white hover:text-lux-taupe transition-colors font-semibold">Advon Media</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'bg-white/80', 'backdrop-blur-xl', 'shadow-sm');
+                navbar.classList.remove('py-4');
+                // Target glass div inside nav to remove its styling when scrolling for cleaner look
+                navbar.firstElementChild.firstElementChild.classList.remove('glass', 'shadow-elegant', 'px-6', 'py-3', 'rounded-full');
+                navbar.firstElementChild.classList.remove('px-6', 'py-4');
+                navbar.firstElementChild.classList.add('px-8');
+            } else {
+                navbar.classList.remove('py-2', 'bg-white/80', 'backdrop-blur-xl', 'shadow-sm');
+                navbar.classList.add('py-4');
+                navbar.firstElementChild.firstElementChild.classList.add('glass', 'shadow-elegant', 'px-6', 'py-3', 'rounded-full');
+                navbar.firstElementChild.classList.add('px-6', 'py-4');
+                navbar.firstElementChild.classList.remove('px-8');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        mobileBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if(isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // prevent scrolling
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Scroll Reveal Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    obs.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lightbox Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 500); // Wait for transition
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            // Close others (optional)
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                if(faq !== item) faq.classList.remove('active');
+            });
+            // Toggle clicked
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
