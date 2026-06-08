@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Έλενα Κοντού | Σύμβουλος Ψυχικής Υγείας & Ψυχοθεραπεύτρια - Παλαιό Φάληρο</title>
-    <meta name="description" content="Η Έλενα Κοντού είναι Σύμβουλος Ψυχικής Υγείας στο Π. Φάληρο. Παρέχει Συνθετική Ψυχοθεραπεία για ενήλικες, εφήβους, ζευγάρια, δια ζώσης & online.">
+    <title>Έλενα Κοντού | Σύμβουλος Ψυχικής Υγείας - Παλαιό Φάληρο</title>
+    <meta name="description" content="Η Έλενα Κοντού είναι Σύμβουλος Ψυχικής Υγείας στο Π. Φάληρο. Παρέχει υποστήριξη και συμβουλευτική για ενήλικες, εφήβους και ζευγάρια, δια ζώσης & online.">
     
     <link rel="icon" href="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/logo%20of1).jpg" type="image/jpeg">
 
@@ -21,9 +21,9 @@
                 extend: {
                     colors: {
                         lux: {
-                            accent: '#a8d8d4',       /* Soft pastel turquoise */
-                            accentLight: '#e0f2f1',  /* Very pale pastel turquoise for backgrounds */
-                            accentDark: '#7bb3ae',   /* Slightly darker pastel turquoise for readable borders/accents */
+                            accent: '#a8d8d4',       
+                            accentLight: '#e0f2f1',  
+                            accentDark: '#7bb3ae',   
                             dark: '#0c0e12',        
                             slate: '#1a1d24',       
                             gray: '#f7f9f9',        
@@ -126,7 +126,6 @@
             border-color: #a8d8d4;
         }
 
-        /* Standard Dropdown Accordion */
         .faq-answer {
             max-height: 0;
             overflow: hidden;
@@ -146,12 +145,10 @@
 </head>
 <body class="bg-lux-gray text-lux-text font-sans selection:bg-lux-accent selection:text-lux-dark">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 lg:py-6">
             <div class="glass rounded-full flex justify-between items-center px-6 py-2 shadow-elegant">
                 
-                <!-- Larger Logo -->
                 <a href="#" class="group relative z-10 -my-4 md:-my-6" aria-label="Επιστροφή στην αρχή">
                     <div class="logo-circle w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
                         <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/logo%20of1).jpg" alt="Έλενα Κοντού Logo">
@@ -173,7 +170,6 @@
         </div>
     </nav>
         
-    <!-- Mobile Menu Overlay (Solid Color with clear X) -->
     <div id="mobile-menu" class="fixed inset-0 w-full h-screen bg-lux-dark hidden flex-col items-center justify-center space-y-10 z-[100] overflow-y-auto">
         <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-lux-accent transition-colors focus:outline-none" aria-label="Κλείσιμο Μενού">
             <i data-lucide="x" class="w-10 h-10"></i>
@@ -185,8 +181,6 @@
         <a href="#contact" class="px-10 py-4 bg-lux-accent text-lux-dark rounded-full text-xl font-semibold hover:bg-white transition-colors mobile-link shadow-glow mt-8">Κλείστε Ραντεβού</a>
     </div>
 
-    <!-- Hero Section -->
-    <!-- Added pt-40 md:pt-48 to create a clear gap below the new larger navbar -->
     <section class="relative min-h-[100svh] flex items-center pt-40 md:pt-48 pb-20 px-6 overflow-hidden bg-lux-dark">
         <div class="absolute inset-0 z-0">
             <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5172.JPG');"></div>
@@ -197,20 +191,17 @@
 
         <div class="max-w-7xl mx-auto w-full relative z-20">
             
-            <!-- MOBILE LAYOUT -->
             <div class="flex flex-col lg:hidden gap-10 items-center">
-                <!-- Part 1: Top Text -->
                 <div class="text-center reveal">
                     <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-dark text-lux-accent text-xs font-bold tracking-widest uppercase mb-6 border border-lux-accent/30 shadow-[0_0_15px_rgba(168,216,212,0.2)]">
-                        ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ & ΨΥΧΟΘΕΡΑΠΕΥΤΡΙΑ
+                        ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ
                     </div>
                     <h1 class="text-4xl md:text-5xl font-serif text-white leading-[1.15]">
-                        Συνθετική Ψυχοθεραπεία & Παιδαγωγική: <br>
+                        Συνθετική Προσέγγιση: <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-lux-accentLight to-lux-accent italic">Ένα Ασφαλές Πλαίσιο</span> για Κάθε Στάδιο της Ζωής.
                     </h1>
                 </div>
 
-                <!-- Part 2: Image -->
                 <div class="relative w-full max-w-[320px] mx-auto reveal delay-100">
                     <div class="absolute inset-0 bg-lux-accent/20 rounded-[2rem] blur-[40px]"></div>
                     <div class="relative aspect-[3/4] rounded-t-[8rem] rounded-b-[2rem] overflow-hidden shadow-2xl glass-dark p-2">
@@ -219,10 +210,9 @@
                     </div>
                 </div>
 
-                <!-- Part 3: Subtext & Buttons -->
                 <div class="text-center reveal delay-200">
                     <p class="text-lg text-gray-300 mb-8 font-light leading-relaxed px-4">
-                        Ένας 100% ασφαλής και μη-επικριτικός χώρος στο Παλαιό Φάληρο. Στόχος μας είναι να σας βοηθήσουμε να βρείτε ξανά το κέντρο και τη φωνή σας.
+                        Ένας 100% ασφαλής και μη-επικριτικός χώρος στο Παλαιό Φάληρο. Στόχος μου είναι να σας βοηθήσω να βρείτε ξανά το κέντρο και τη φωνή σας.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
                         <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-lux-accent text-lux-dark rounded-full font-bold hover:bg-white transition-all duration-300 shadow-glow flex items-center justify-center gap-2">
@@ -235,19 +225,18 @@
                 </div>
             </div>
 
-            <!-- DESKTOP LAYOUT -->
             <div class="hidden lg:grid grid-cols-12 gap-12 items-center mt-8">
                 <div class="col-span-7 reveal text-left">
                     <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-dark text-lux-accent text-xs font-bold tracking-widest uppercase mb-8 border border-lux-accent/30">
                         <span class="w-1.5 h-1.5 rounded-full bg-lux-accent animate-pulse"></span>
-                        ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ & ΨΥΧΟΘΕΡΑΠΕΥΤΡΙΑ
+                        ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ
                     </div>
                     <h1 class="text-6xl xl:text-7xl font-serif text-white leading-[1.15] mb-6 drop-shadow-xl">
-                        Συνθετική Ψυχοθεραπεία & Παιδαγωγική: <br>
+                        Συνθετική Προσέγγιση: <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-lux-accentLight to-lux-accent italic">Ένα Ασφαλές Πλαίσιο</span> <br>για Κάθε Στάδιο της Ζωής.
                     </h1>
                     <p class="text-xl text-gray-300 mb-10 max-w-2xl font-light leading-relaxed">
-                        Ένας 100% ασφαλής και μη-επικριτικός χώρος στο Παλαιό Φάληρο. Στόχος μας είναι να σας βοηθήσουμε να βρείτε ξανά το κέντρο και τη φωνή σας.
+                        Ένας 100% ασφαλής και μη-επικριτικός χώρος στο Παλαιό Φάληρο. Στόχος μου είναι να σας βοηθήσω να βρείτε ξανά το κέντρο και τη φωνή σας.
                     </p>
                     <div class="flex items-center gap-5">
                         <a href="#contact" class="px-8 py-4 bg-lux-accent text-lux-dark rounded-full font-bold hover:bg-white transition-all duration-300 shadow-glow flex items-center gap-2 group">
@@ -273,24 +262,21 @@
         <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-lux-gray to-transparent z-20 pointer-events-none"></div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 px-6 relative overflow-hidden bg-lux-gray">
-        <!-- Abstract Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-lux-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto">
             
-            <!-- MOBILE LAYOUT -->
             <div class="flex flex-col lg:hidden gap-10 items-center">
                 <div class="text-center reveal">
-                    <span class="text-lux-accentDark font-bold tracking-widest text-xs uppercase mb-4 block">ΓΝΩΡΙΣΤΕ ΤΗ ΘΕΡΑΠΕΥΤΡΙΑ</span>
-                    <h2 class="text-4xl font-serif text-lux-dark mb-6 leading-tight">Η επιστήμη της Αγωγής συναντά την Ψυχοθεραπεία</h2>
+                    <span class="text-lux-accentDark font-bold tracking-widest text-xs uppercase mb-4 block">ΓΝΩΡΙΣΤΕ ΤΗ ΣΥΜΒΟΥΛΟ</span>
+                    <h2 class="text-4xl font-serif text-lux-dark mb-6 leading-tight">Λίγα λόγια για την πορεία μου</h2>
                     <div class="text-lg text-lux-text/80 font-light leading-relaxed text-left">
                         <p class="mb-4">
-                            Η <strong>Έλενα Κοντού</strong> είναι Σύμβουλος Ψυχικής Υγείας και Ψυχοθεραπεύτρια, διατηρώντας το ιδιωτικό της γραφείο στο Παλαιό Φάληρο. Η ακαδημαϊκή της πορεία συνδυάζει ιδανικά την επιστήμη της Αγωγής με την Ψυχοθεραπεία. 
+                            Η <strong>Έλενα Κοντού</strong> είναι Σύμβουλος Ψυχικής Υγείας, διατηρώντας το ιδιωτικό της γραφείο στο Παλαιό Φάληρο. 
                         </p>
                         <p>
-                            Αρχικά, αποφοίτησε από το Τμήμα Επιστημών της Εκπαίδευσης και Αγωγής στην Προσχολική Ηλικία (ΤΕΕΑΠΗ) του Πανεπιστημίου Πατρών, αποκτώντας μια στέρεη βάση στην παιδική και αναπτυξιακή ψυχολογία. Στη συνέχεια, ολοκλήρωσε το τριετές, απαιτητικό πρόγραμμα Ψυχοθεραπείας & Συμβουλευτικής στο Μητροπολιτικό Κολλέγιο, εξειδικευόμενη στη Συνθετική προσέγγιση (Γνωσιακή-Συμπεριφορική, Ψυχοδυναμική, Προσωποκεντρική).
+                            Αρχικά, αποφοίτησε από το Τμήμα Επιστημών της Εκπαίδευσης και Αγωγής στην Προσχολική Ηλικία (ΤΕΕΑΠΗ) του Πανεπιστημίου Πατρών, αποκτώντας μια στέρεη βάση στην παιδική και αναπτυξιακή ψυχολογία. Στη συνέχεια, ολοκλήρωσε το τριετές πρόγραμμα Ψυχοθεραπείας & Συμβουλευτικής στο Μητροπολιτικό Κολλέγιο, εξειδικευόμενη στη Συνθετική προσέγγιση (Γνωσιακή-Συμπεριφορική, Ψυχοδυναμική, Προσωποκεντρική).
                         </p>
                     </div>
                 </div>
@@ -301,8 +287,12 @@
                 </div>
 
                 <div class="text-lg text-lux-text/80 font-light leading-relaxed text-left reveal delay-200 w-full">
-                    <blockquote class="border-l-4 border-lux-accent pl-5 py-2 my-6 text-xl font-serif text-lux-dark italic bg-lux-accentLight/30 rounded-r-lg">
-                        "Η επαγγελματική ταυτότητα είναι βαθιά ριζωμένη στην ενσυναίσθηση και την κοινωνική προσφορά."
+                    <p class="mb-6">
+                        Κατέχει επαγγελματική εξειδίκευση για Συμβουλευτική σχέσεων & ζεύγους στο Mediterranean College. Παράλληλα, από το 2026 εκπαιδεύεται με σκοπό την απόκτηση πτυχίου BSc Ψυχολογίας και την άδεια ασκήσεως επαγγέλματος.
+                    </p>
+
+                    <blockquote class="border-l-4 border-lux-accent pl-5 py-3 my-6 text-xl font-serif text-lux-dark bg-lux-accentLight/30 rounded-r-lg">
+                        <i class="italic">«Η ενσυναίσθηση, η αυθεντικότητα και η αποδοχή αποτελούν την επαγγελματική μου ταυτότητα.»</i>
                     </blockquote>
                     <p>
                         Με συνολική κλινική εμπειρία 5 ετών, η πολύτιμη εθελοντική της εργασία—τόσο στην υποστήριξη προσφύγων στην Πάτρα, όσο και στην Τηλεφωνική Γραμμή υποστήριξης <em>"Be Strong 1069"</em> για άτομα που έρχονται αντιμέτωπα με τον καρκίνο—της έχει χαρίσει μια σπάνια ικανότητα: να διαχειρίζεται το βαρύ ψυχικό φορτίο, το στρες και την κρίση με απόλυτη ψυχραιμία, σταθερότητα και ανθρωπιά.
@@ -310,7 +300,6 @@
                 </div>
             </div>
 
-            <!-- DESKTOP LAYOUT -->
             <div class="hidden lg:grid grid-cols-12 gap-16 items-center">
                 <div class="col-span-5 relative reveal">
                     <div class="relative w-full max-w-md mx-auto animate-float">
@@ -320,23 +309,26 @@
                 </div>
 
                 <div class="col-span-7 reveal delay-200">
-                    <span class="text-lux-accentDark font-bold tracking-widest text-xs uppercase mb-4 block">ΓΝΩΡΙΣΤΕ ΤΗ ΘΕΡΑΠΕΥΤΡΙΑ</span>
-                    <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mb-8 leading-tight">Η επιστήμη της Αγωγής συναντά την Ψυχοθεραπεία</h2>
+                    <span class="text-lux-accentDark font-bold tracking-widest text-xs uppercase mb-4 block">ΓΝΩΡΙΣΤΕ ΤΗ ΣΥΜΒΟΥΛΟ</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mb-8 leading-tight">Λίγα λόγια για την πορεία μου</h2>
                     
                     <div class="space-y-6 text-lg text-lux-text/80 font-light leading-relaxed">
                         <p>
-                            Η <strong>Έλενα Κοντού</strong> είναι Σύμβουλος Ψυχικής Υγείας και Ψυχοθεραπεύτρια, διατηρώντας το ιδιωτικό της γραφείο στο Παλαιό Φάληρο. Η ακαδημαϊκή της πορεία συνδυάζει ιδανικά την επιστήμη της Αγωγής με την Ψυχοθεραπεία. 
+                            Η <strong>Έλενα Κοντού</strong> είναι Σύμβουλος Ψυχικής Υγείας, διατηρώντας το ιδιωτικό της γραφείο στο Παλαιό Φάληρο.
                         </p>
                         <p>
-                            Αρχικά, αποφοίτησε από το Τμήμα Επιστημών της Εκπαίδευσης και Αγωγής στην Προσχολική Ηλικία (ΤΕΕΑΠΗ) του Πανεπιστημίου Πατρών, αποκτώντας μια στέρεη βάση στην παιδική και αναπτυξιακή ψυχολογία. Στη συνέχεια, ολοκλήρωσε το τριετές, απαιτητικό πρόγραμμα Ψυχοθεραπείας & Συμβουλευτικής στο Μητροπολιτικό Κολλέγιο, εξειδικευόμενη στη Συνθετική προσέγγιση (Γνωσιακή-Συμπεριφορική, Ψυχοδυναμική, Προσωποκεντρική).
+                            Αρχικά, αποφοίτησε από το Τμήμα Επιστημών της Εκπαίδευσης και Αγωγής στην Προσχολική Ηλικία (ΤΕΕΑΠΗ) του Πανεπιστημίου Πατρών, αποκτώντας μια στέρεη βάση στην παιδική και αναπτυξιακή ψυχολογία. Στη συνέχεια, ολοκλήρωσε το τριετές πρόγραμμα Ψυχοθεραπείας & Συμβουλευτικής στο Μητροπολιτικό Κολλέγιο, εξειδικευόμενη στη Συνθετική προσέγγιση (Γνωσιακή-Συμπεριφορική, Ψυχοδυναμική, Προσωποκεντρική).
+                        </p>
+                        <p>
+                            Κατέχει επαγγελματική εξειδίκευση για Συμβουλευτική σχέσεων & ζεύγους στο Mediterranean College. Από το 2026 εκπαιδεύεται με σκοπό την απόκτηση πτυχίου BSc Ψυχολογίας και την άδεια ασκήσεως επαγγέλματος.
                         </p>
                         
-                        <blockquote class="border-l-4 border-lux-accent pl-6 py-3 my-8 text-xl font-serif text-lux-dark italic bg-lux-accentLight/40 rounded-r-xl">
-                            "Η επαγγελματική ταυτότητα είναι βαθιά ριζωμένη στην ενσυναίσθηση και την κοινωνική προσφορά."
+                        <blockquote class="border-l-4 border-lux-accent pl-6 py-4 my-8 text-xl font-serif text-lux-dark bg-lux-accentLight/40 rounded-r-xl">
+                            <i class="italic">«Η ενσυναίσθηση, η αυθεντικότητα και η αποδοχή αποτελούν την επαγγελματική μου ταυτότητα.»</i>
                         </blockquote>
                         
                         <p>
-                            Με συνολική κλινική εμπειρία 5 ετών, η πολύτιμη εθελοντική της εργασία—τόσο στην υποστήριξη προσφύγων (γονέων και παιδιών) στην Πάτρα, όσο και στην Τηλεφωνική Γραμμή υποστήριξης <em>"Be Strong 1069"</em>—της έχει χαρίσει μια σπάνια ικανότητα: να διαχειρίζεται το βαρύ ψυχικό φορτίο, το στρες και την κρίση με απόλυτη ψυχραιμία, σταθερότητα και ανθρωπιά.
+                            Με συνολική κλινική εμπειρία 5 ετών, η πολύτιμη εθελοντική της εργασία—τόσο στην υποστήριξη προσφύγων στην Πάτρα, όσο και στην Τηλεφωνική Γραμμή υποστήριξης <em>"Be Strong 1069"</em>—της έχει χαρίσει μια σπάνια ικανότητα: να διαχειρίζεται το βαρύ ψυχικό φορτίο, το στρες και την κρίση με απόλυτη ψυχραιμία, σταθερότητα και ανθρωπιά.
                         </p>
                     </div>
                 </div>
@@ -345,7 +337,6 @@
         </div>
     </section>
 
-    <!-- Services Section (Upgraded Unique Icons UI) -->
     <section id="services" class="py-32 px-6 bg-white relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24 reveal">
@@ -356,59 +347,53 @@
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
                 
-                <!-- Service 1 -->
                 <div class="service-card relative p-10 lg:p-12 rounded-[2.5rem] bg-lux-gray border border-transparent overflow-hidden group reveal">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-lux-accentLight rounded-bl-[100%] z-0 transition-transform duration-700 group-hover:scale-110 opacity-50"></div>
                     
                     <div class="relative z-10">
                         <div class="mb-10 flex items-center justify-between">
-                            <!-- Unique Icon Wrapper -->
                             <div class="relative w-20 h-20">
                                 <div class="absolute -inset-2 bg-lux-accent/30 rounded-full blur-xl group-hover:blur-2xl group-hover:bg-lux-accent/50 transition-all duration-500"></div>
                                 <div class="absolute inset-0 bg-white/90 backdrop-blur-sm rounded-tr-[2rem] rounded-bl-[2rem] rounded-tl-xl rounded-br-xl shadow-lg border border-lux-accent/20 group-hover:rounded-2xl transition-all duration-500 flex items-center justify-center z-10 overflow-hidden">
                                     <div class="absolute inset-0 bg-gradient-to-br from-lux-accentLight/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <i data-lucide="user-circle" class="w-10 h-10 text-lux-accentDark relative z-10 group-hover:scale-110 transition-transform duration-500"></i>
+                                    <i data-lucide="user" class="w-10 h-10 text-lux-accentDark relative z-10 group-hover:scale-110 transition-transform duration-500"></i>
                                 </div>
                             </div>
                             <span class="text-6xl font-serif font-bold text-lux-dark/5 group-hover:text-lux-accentDark/10 transition-colors duration-500">01</span>
                         </div>
-                        <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4">Συνθετική Θεραπεία Ενηλίκων & Ψυχοσωματικά</h3>
+                        <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4">Συνθετική Θεραπεία Ενηλίκων</h3>
                         <p class="text-lux-text/70 leading-relaxed font-light">
-                            Το έντονο άγχος και τα καταπιεσμένα συναισθήματα πολύ συχνά σωματοποιούνται, προκαλώντας πόνους χωρίς ιατρική αιτία. Μέσω της Συνθετικής προσέγγισης, δουλεύουμε συνεργατικά για να αποκωδικοποιήσουμε το μήνυμα που προσπαθεί να σας στείλει το σώμα σας, αντιμετωπίζοντας το στρες με ρεαλιστικούς στόχους.
+                            Μια θεραπευτική σχέση 1 προς 1, όπου το έντονο άγχος και τα καταπιεσμένα συναισθήματα αποκτούν χώρο να εκφραστούν και να επεξεργαστούν.
                         </p>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="service-card relative p-10 lg:p-12 rounded-[2.5rem] bg-lux-gray border border-transparent overflow-hidden group reveal delay-100 md:mt-12">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-lux-accentLight rounded-bl-[100%] z-0 transition-transform duration-700 group-hover:scale-110 opacity-50"></div>
                     
                     <div class="relative z-10">
                         <div class="mb-10 flex items-center justify-between">
-                            <!-- Unique Icon Wrapper -->
                             <div class="relative w-20 h-20">
                                 <div class="absolute -inset-2 bg-lux-accent/30 rounded-full blur-xl group-hover:blur-2xl group-hover:bg-lux-accent/50 transition-all duration-500"></div>
                                 <div class="absolute inset-0 bg-white/90 backdrop-blur-sm rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-xl rounded-bl-xl shadow-lg border border-lux-accent/20 group-hover:rounded-2xl transition-all duration-500 flex items-center justify-center z-10 overflow-hidden">
                                     <div class="absolute inset-0 bg-gradient-to-bl from-lux-accentLight/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <i data-lucide="graduation-cap" class="w-10 h-10 text-lux-accentDark relative z-10 group-hover:scale-110 transition-transform duration-500"></i>
+                                    <i data-lucide="zap" class="w-10 h-10 text-lux-accentDark relative z-10 group-hover:scale-110 transition-transform duration-500"></i>
                                 </div>
                             </div>
                             <span class="text-6xl font-serif font-bold text-lux-dark/5 group-hover:text-lux-accentDark/10 transition-colors duration-500">02</span>
                         </div>
-                        <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4">Ψυχολογία Παιδιών, Εφήβων & Σεξουαλική Διαπαιδαγώγηση</h3>
+                        <h3 class="text-2xl font-serif font-semibold text-lux-dark mb-4">Ψυχοθεραπεία Εφήβων & Σεξουαλική Διαπαιδαγώγηση</h3>
                         <p class="text-lux-text/70 leading-relaxed font-light">
-                            Αντλώντας από το πτυχίο στην Εκπαίδευση, η θεραπεύτρια «μιλάει τη γλώσσα» των νέων. Ένα σύγχρονο καταφύγιο για την επίλυση αποριών, την ανακάλυψη ταυτότητας και τη θωράκιση απέναντι σε τοξικές συμπεριφορές στην απαιτητική φάση της εφηβείας.
+                            Ένα σύγχρονο καταφύγιο για την επίλυση αποριών, την ανακάλυψη ταυτότητας και τη θωράκιση απέναντι σε τοξικές συμπεριφορές στην απαιτητική φάση της εφηβείας.
                         </p>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="service-card relative p-10 lg:p-12 rounded-[2.5rem] bg-lux-gray border border-transparent overflow-hidden group reveal md:-mt-12">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-lux-accentLight rounded-bl-[100%] z-0 transition-transform duration-700 group-hover:scale-110 opacity-50"></div>
                     
                     <div class="relative z-10">
                         <div class="mb-10 flex items-center justify-between">
-                            <!-- Unique Icon Wrapper -->
                             <div class="relative w-20 h-20">
                                 <div class="absolute -inset-2 bg-lux-accent/30 rounded-full blur-xl group-hover:blur-2xl group-hover:bg-lux-accent/50 transition-all duration-500"></div>
                                 <div class="absolute inset-0 bg-white/90 backdrop-blur-sm rounded-tr-[2rem] rounded-bl-[2rem] rounded-tl-xl rounded-br-xl shadow-lg border border-lux-accent/20 group-hover:rounded-2xl transition-all duration-500 flex items-center justify-center z-10 overflow-hidden">
@@ -425,13 +410,11 @@
                     </div>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="service-card relative p-10 lg:p-12 rounded-[2.5rem] bg-lux-gray border border-transparent overflow-hidden group reveal delay-100">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-lux-accentLight rounded-bl-[100%] z-0 transition-transform duration-700 group-hover:scale-110 opacity-50"></div>
                     
                     <div class="relative z-10">
                         <div class="mb-10 flex items-center justify-between">
-                            <!-- Unique Icon Wrapper -->
                             <div class="relative w-20 h-20">
                                 <div class="absolute -inset-2 bg-lux-accent/30 rounded-full blur-xl group-hover:blur-2xl group-hover:bg-lux-accent/50 transition-all duration-500"></div>
                                 <div class="absolute inset-0 bg-white/90 backdrop-blur-sm rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-xl rounded-bl-xl shadow-lg border border-lux-accent/20 group-hover:rounded-2xl transition-all duration-500 flex items-center justify-center z-10 overflow-hidden">
@@ -452,7 +435,6 @@
         </div>
     </section>
 
-    <!-- Approaches Section (Οι Προσεγγίσεις μας) -->
     <section id="approaches" class="py-32 px-6 bg-lux-dark text-white relative overflow-hidden">
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-lux-accent/10 rounded-full blur-[120px]"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-lux-accent/10 rounded-full blur-[120px]"></div>
@@ -460,44 +442,41 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-20 reveal">
                 <span class="text-lux-accent font-bold tracking-widest text-xs uppercase mb-4 block">ΘΕΡΑΠΕΥΤΙΚΗ ΦΙΛΟΣΟΦΙΑ</span>
-                <h2 class="text-4xl md:text-5xl font-serif mb-6">Οι Προσεγγίσεις μας</h2>
+                <h2 class="text-4xl md:text-5xl font-serif mb-6">Οι Προσεγγίσεις μου</h2>
                 <p class="mt-6 text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-                    Στο πλαίσιο της Συνθετικής Ψυχοθεραπείας, αντλούμε εργαλεία από διαφορετικές επιστημονικές προσεγγίσεις για να δημιουργήσουμε το ιδανικό θεραπευτικό πλάνο αποκλειστικά για εσάς.
+                    Στο πλαίσιο της Συνθετικής προσέγγισης, αντλώ εργαλεία από διαφορετικές επιστημονικές θεωρίες για να δημιουργήσω το ιδανικό θεραπευτικό πλάνο αποκλειστικά για εσάς.
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-8">
                 
-                <!-- Approach 1 -->
                 <div class="bg-lux-slate p-10 rounded-3xl border border-white/5 hover:border-lux-accent/30 transition-colors group reveal">
                     <div class="w-14 h-14 rounded-full bg-lux-dark border border-lux-accent/20 flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(168,216,212,0.1)] group-hover:bg-lux-accent group-hover:text-lux-dark transition-all duration-300">
                         <i data-lucide="compass" class="w-6 h-6 text-lux-accent group-hover:text-lux-dark"></i>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-white mb-4">Ψυχοδυναμική Ματιά & Παιδαγωγική</h3>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4">Ψυχοδυναμική Ματιά</h3>
                     <p class="text-gray-400 font-light leading-relaxed">
-                        Εξερευνούμε τα θεμέλιά σας. Αναλύουμε πώς τα παιδικά σας χρόνια και το οικογενειακό περιβάλλον διαμόρφωσαν τους τρόπους που αγαπάτε και αμύνεστε, "διαβάζοντας" τις ανάγκες του εσωτερικού σας παιδιού.
+                        Εξερευνώ τα θεμέλιά σας. Αναλύω πώς τα παιδικά σας χρόνια και το οικογενειακό περιβάλλον διαμόρφωσαν τους τρόπους που αγαπάτε και αμύνεστε, "διαβάζοντας" τις ανάγκες του εσωτερικού σας παιδιού.
                     </p>
                 </div>
 
-                <!-- Approach 2 -->
                 <div class="bg-lux-slate p-10 rounded-3xl border border-white/5 hover:border-lux-accent/30 transition-colors group reveal delay-100">
                     <div class="w-14 h-14 rounded-full bg-lux-dark border border-lux-accent/20 flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(168,216,212,0.1)] group-hover:bg-lux-accent group-hover:text-lux-dark transition-all duration-300">
                         <i data-lucide="shield" class="w-6 h-6 text-lux-accent group-hover:text-lux-dark"></i>
                     </div>
                     <h3 class="text-2xl font-serif font-bold text-white mb-4">Προσωποκεντρική Θεραπεία</h3>
                     <p class="text-gray-400 font-light leading-relaxed">
-                        Η θεραπευτική μας σχέση βασίζεται στην απόλυτη, άνευ όρων αποδοχή. Στεκόμαστε δίπλα σας με 100% ενσυναίσθηση, χωρίς κριτική. Ένας χώρος όπου είστε ελεύθεροι να εκφραστείτε αληθινά για να ξαναχτιστείτε.
+                        Η θεραπευτική μου σχέση βασίζεται στην απόλυτη, άνευ όρων αποδοχή. Στέκομαι δίπλα σας με 100% ενσυναίσθηση, χωρίς κριτική. Ένας χώρος όπου είστε ελεύθεροι να εκφραστείτε αληθινά για να ξαναχτιστείτε.
                     </p>
                 </div>
 
-                <!-- Approach 3 -->
                 <div class="bg-lux-slate p-10 rounded-3xl border border-white/5 hover:border-lux-accent/30 transition-colors group reveal delay-200">
                     <div class="w-14 h-14 rounded-full bg-lux-dark border border-lux-accent/20 flex items-center justify-center mb-8 shadow-[0_0_20px_rgba(168,216,212,0.1)] group-hover:bg-lux-accent group-hover:text-lux-dark transition-all duration-300">
                         <i data-lucide="leaf" class="w-6 h-6 text-lux-accent group-hover:text-lux-dark"></i>
                     </div>
                     <h3 class="text-2xl font-serif font-bold text-white mb-4">Γνωσιακή-Συμπεριφορική (CBT)</h3>
                     <p class="text-gray-400 font-light leading-relaxed">
-                        Χρησιμοποιούμε πρακτικά εργαλεία στο «εδώ και τώρα». Σας παρέχουμε συγκεκριμένες τεχνικές και γνωστικές αναδομήσεις για να σπάσετε τον φαύλο κύκλο του άγχους και να δείτε χειροπιαστές αλλαγές.
+                        Χρησιμοποιώ πρακτικά εργαλεία στο «εδώ και τώρα». Σας παρέχω συγκεκριμένες τεχνικές και γνωστικές αναδομήσεις για να σπάσετε τον φαύλο κύκλο του άγχους και να δείτε χειροπιαστές αλλαγές.
                     </p>
                 </div>
 
@@ -505,18 +484,15 @@
         </div>
     </section>
 
-    <!-- Space / Office Section (Symmetrical & Smaller) -->
     <section id="space" class="py-24 px-6 bg-lux-gray border-b border-lux-border/40">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16 reveal">
                 <span class="text-lux-accentDark font-bold tracking-widest text-xs uppercase">Παλαιο Φαληρο</span>
-                <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mt-4">Ο Χώρος Μας</h2>
+                <h2 class="text-4xl md:text-5xl font-serif text-lux-dark mt-4">Ο Χώρος</h2>
                 <p class="mt-4 text-lux-text/60 font-light max-w-xl mx-auto">Ένα περιβάλλον απόλυτης ηρεμίας, σχεδιασμένο με παστέλ αποχρώσεις για να προσφέρει ασφάλεια και ιδιωτικότητα.</p>
             </div>
 
-            <!-- Symmetrical 4-Column Grid -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 items-center">
-                <!-- Image 1 -->
                 <button class="w-full aspect-square overflow-hidden group relative reveal shadow-sm hover:shadow-accent transition-shadow rounded-2xl bg-white p-1" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5177.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
                     <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5177.JPG" alt="Χώρος γραφείου" class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.05]">
                     <div class="absolute inset-0 bg-lux-accentDark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center backdrop-blur-[2px]">
@@ -526,7 +502,6 @@
                     </div>
                 </button>
                 
-                <!-- Image 2 -->
                 <button class="w-full aspect-square overflow-hidden group relative reveal delay-100 shadow-sm hover:shadow-accent transition-shadow rounded-2xl bg-white p-1" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5173.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
                     <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5173.JPG" alt="Λεπτομέρεια χώρου" class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.05]">
                     <div class="absolute inset-0 bg-lux-accentDark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center backdrop-blur-[2px]">
@@ -536,7 +511,6 @@
                     </div>
                 </button>
                 
-                <!-- Image 3 -->
                 <button class="w-full aspect-square overflow-hidden group relative reveal delay-200 shadow-sm hover:shadow-accent transition-shadow rounded-2xl bg-white p-1" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5172.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
                     <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5172.JPG" alt="Γραφείο ψυχοθεραπείας" class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.05]">
                     <div class="absolute inset-0 bg-lux-accentDark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center backdrop-blur-[2px]">
@@ -546,7 +520,6 @@
                     </div>
                 </button>
 
-                <!-- Image 4 -->
                 <button class="w-full aspect-square overflow-hidden group relative reveal delay-300 shadow-sm hover:shadow-accent transition-shadow rounded-2xl bg-white p-1" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5171.JPG')" aria-label="Μεγέθυνση εικόνας χώρου">
                     <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/IMG_5171.JPG" alt="Καθιστικό θεραπείας" class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.05]">
                     <div class="absolute inset-0 bg-lux-accentDark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center backdrop-blur-[2px]">
@@ -559,7 +532,6 @@
         </div>
     </section>
 
-    <!-- Lightbox Element -->
     <div id="lightbox" class="fixed inset-0 z-[100] bg-lux-dark/98 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
         <button class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors focus:outline-none">
             <i data-lucide="x" class="w-10 h-10"></i>
@@ -567,7 +539,6 @@
         <img id="lightbox-img" src="" alt="Προβολή μεγάλης εικόνας" class="max-w-[95vw] max-h-[95vh] object-contain shadow-2xl cursor-default rounded-lg" onclick="event.stopPropagation()">
     </div>
 
-    <!-- FAQ Section -->
     <section class="py-24 px-6 bg-white">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-16 reveal">
@@ -578,37 +549,37 @@
                 
                 <div class="faq-item reveal bg-lux-gray rounded-2xl border border-transparent hover:border-lux-accent/30 transition-colors">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-serif font-semibold text-lg text-lux-dark">Ποιες ηλικιακές ομάδες αναλαμβάνετε;</span>
+                        <span class="font-serif font-semibold text-lg text-lux-dark">Ποιες ηλικιακές ομάδες αναλαμβάνω;</span>
                         <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm shrink-0 border border-lux-border/50">
                             <i data-lucide="plus" class="faq-icon w-4 h-4 text-lux-accentDark transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="faq-answer px-6 text-lux-text/70 font-light leading-relaxed">
-                        Αναλαμβάνω ενήλικες, εφήβους, ζευγάρια και γονείς. Διαθέτοντας ειδική κατάρτιση στην παιδική-αναπτυξιακή ψυχολογία και τη σεξουαλική διαπαιδαγώγηση, παρέχεται στοχευμένη υποστήριξη σε κάθε ξεχωριστή αναπτυξιακή φάση.
+                        Αναλαμβάνω ενήλικες, εφήβους, ζευγάρια και γονείς. Διαθέτοντας ειδική κατάρτιση στην αναπτυξιακή ψυχολογία και τη σεξουαλική διαπαιδαγώγηση, παρέχεται στοχευμένη υποστήριξη σε κάθε ξεχωριστή φάση ζωής.
                     </div>
                 </div>
 
                 <div class="faq-item reveal delay-100 bg-lux-gray rounded-2xl border border-transparent hover:border-lux-accent/30 transition-colors">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-serif font-semibold text-lg text-lux-dark">Τι είναι τα ψυχοσωματικά συμπτώματα;</span>
+                        <span class="font-serif font-semibold text-lg text-lux-dark">Τι είναι η Συνθετική Προσέγγιση;</span>
                         <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm shrink-0 border border-lux-border/50">
                             <i data-lucide="plus" class="faq-icon w-4 h-4 text-lux-accentDark transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="faq-answer px-6 text-lux-text/70 font-light leading-relaxed">
-                        Το έντονο άγχος και τα καταπιεσμένα συναισθήματα πολύ συχνά σωματοποιούνται, προκαλώντας πόνους και ενοχλήσεις χωρίς οργανική ιατρική αιτία. Μέσω της Συνθετικής προσέγγισης, αποκωδικοποιούμε αυτό που θέλει να πει το σώμα και εφοδιαζόμαστε με πρακτικά εργαλεία.
+                        Η Συνθετική προσέγγιση αποτελεί μια θεραπευτική μέθοδο που συνδυάζει στοιχεία από διαφορετικές θεωρίες (Γνωσιακή-Συμπεριφορική, Ψυχοδυναμική, Προσωποκεντρική) για να δημιουργήσει ένα εξατομικευμένο πλάνο που ανταποκρίνεται στις δικές σας μοναδικές ανάγκες.
                     </div>
                 </div>
 
                 <div class="faq-item reveal delay-200 bg-lux-gray rounded-2xl border border-transparent hover:border-lux-accent/30 transition-colors">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-serif font-semibold text-lg text-lux-dark">Παρέχετε διαδικτυακές συνεδρίες (online);</span>
+                        <span class="font-serif font-semibold text-lg text-lux-dark">Παρέχω διαδικτυακές συνεδρίες (online);</span>
                         <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm shrink-0 border border-lux-border/50">
                             <i data-lucide="plus" class="faq-icon w-4 h-4 text-lux-accentDark transition-transform duration-300"></i>
                         </div>
                     </button>
                     <div class="faq-answer px-6 text-lux-text/70 font-light leading-relaxed">
-                        Ναι, η θεραπευτική διαδικασία προσαρμόζεται στις απαιτήσεις της σύγχρονης ζωής. Εκτός από τις δια ζώσης συνεδρίες στο ιδιωτικό γραφείο στο Π. Φάληρο, παρέχονται εξίσου ποιοτικές συνεδρίες μέσω βιντεοκλήσης, με την ίδια ακριβώς εχεμύθεια και ασφάλεια.
+                        Ναι, η θεραπευτική διαδικασία προσαρμόζεται στις απαιτήσεις της σύγχρονης ζωής. Εκτός από τις δια ζώσης συνεδρίες στο ιδιωτικό γραφείο στο Π. Φάληρο, προσφέρω εξίσου ποιοτικές συνεδρίες μέσω βιντεοκλήσης, με την ίδια ακριβώς εχεμύθεια και ασφάλεια.
                     </div>
                 </div>
 
@@ -616,25 +587,22 @@
         </div>
     </section>
 
-    <!-- Footer / Contact -->
     <footer id="contact" class="bg-lux-dark pt-24 pb-12 relative overflow-hidden text-white border-t border-lux-accent/20">
         <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-lux-accent/5 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-12 gap-12 mb-20">
                 
-                <!-- Intro Column -->
                 <div class="md:col-span-5 reveal">
                     <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(168,216,212,0.2)] p-2">
                         <img src="https://raw.githubusercontent.com/agelmet/KONTOU/refs/heads/main/logo%20of1).jpg" alt="Logo" class="w-full h-full object-contain rounded-full">
                     </div>
                     <h3 class="text-3xl font-serif mb-4">Έλενα Κοντού</h3>
                     <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-8">
-                        Η επούλωση ξεκινά με την πρώτη επικοινωνία. Είμαστε εδώ για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
+                        Η επούλωση ξεκινά με την πρώτη επικοινωνία. Είμαι εδώ για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής.
                     </p>
                 </div>
 
-                <!-- Contact Details -->
                 <div class="md:col-span-4 reveal delay-100">
                     <h4 class="text-xs font-bold tracking-widest text-lux-accent uppercase mb-6">Στοιχεια Επικοινωνιας</h4>
                     <ul class="space-y-5">
@@ -659,7 +627,6 @@
                     </ul>
                 </div>
 
-                <!-- Hours -->
                 <div class="md:col-span-3 reveal delay-200">
                     <h4 class="text-xs font-bold tracking-widest text-lux-accent uppercase mb-6">Ωραριο Λειτουργιας</h4>
                     <ul class="space-y-4 text-gray-300">
@@ -705,7 +672,6 @@
             }
         });
 
-        // Mobile Menu Logic
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -772,7 +738,6 @@
             }
         });
 
-        // Standard Independent Dropdown Accordion
         function toggleFaq(button) {
             const item = button.parentElement;
             item.classList.toggle('active');
@@ -780,5 +745,3 @@
     </script>
 </body>
 </html>
-
-```
